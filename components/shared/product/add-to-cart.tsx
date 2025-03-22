@@ -13,8 +13,8 @@ const AddToCart = ({ item }: { item: CartItem }) => {
   const handleAddToCart = async () => {
     const res = await addItemToCart(item);
 
-    if (!res.success) {
-      toast.error(res.message, {
+    if (!res!.success) {
+      toast.error(res!.message, {
         style: { backgroundColor: "red", color: "white" },
       });
       return;
